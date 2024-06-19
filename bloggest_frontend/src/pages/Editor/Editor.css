@@ -1,0 +1,281 @@
+.editorpanel {
+    background-color: #F5F2FF;
+    min-height: 100vh;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+select {
+    cursor: pointer;
+}
+
+
+input,
+select {
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: white;
+    padding: 0 1rem;
+    color: rgb(10, 10, 10);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 2rem 0;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 10px 5px rgba(95, 95, 95, 0.1);
+}
+
+option {
+    background-color: white;
+    color: #424070;
+}
+
+.bookmarkBtn {
+    width: 7rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #00080F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    margin: 4rem 0;
+
+}
+
+.IconContainer {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to left bottom, #9b3ce8, #3386ef, #13bcec);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.2rem;
+}
+
+.bookmarkBtn:hover .IconContainer {
+    width: 90px;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: 0.3s;
+}
+
+#banner {
+    display: none;
+}
+
+#banner-label {
+    cursor: pointer;
+    color: #424070;
+}
+
+#banner-label:hover {
+    box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.15);
+}
+
+.custum-file-upload {
+    height: 3rem;
+    border-radius: 10px;
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    border: 1px dashed #000000;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.custum-file-upload .icon svg {
+    height: 30px;
+    fill: #424070;
+}
+
+
+.Documents-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    height: 3rem;
+    border: none;
+    padding: 0px 1rem;
+    border-radius: 5px;
+    background: linear-gradient(to left bottom, #9b3ce8, #3386ef, #13bcec);
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0.7em 1.5em -0.5em rgb(184, 146, 255);
+}
+
+.folderContainer {
+    width: 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.fileBack {
+    z-index: 1;
+    width: 80%;
+    height: auto;
+}
+
+.filePage {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+}
+
+.fileFront {
+    width: 85%;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.95;
+    transform-origin: bottom;
+    transition: all 0.3s ease-out;
+}
+
+.text {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.Documents-btn:hover .filePage {
+    transform: translateY(-5px);
+}
+
+.Documents-btn:hover {
+    background-color: rgb(58, 58, 94);
+}
+
+.Documents-btn:hover .fileFront {
+    transform: rotateX(30deg);
+}
+
+.bottom-bar {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 0px 1rem;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgb(120, 47, 255) 0%, rgb(185, 132, 255) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgb(184, 146, 255);
+    letter-spacing: 0.05em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover,
+.Documents-btn:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em rgb(143, 83, 255);
+}
+
+.cssbuttons-io-button:active.Documents-btn:hover {
+    box-shadow: 0 0.3em 1em -0.5em rgb(151, 95, 255);
+}
+
+.nav-link,
+.back {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.back:hover {
+    color: #424070;
+}
+
+@media screen and (max-width:800px) {
+    .editorpanel {
+        padding: 5rem 1rem;
+    }
+
+    .top {
+        flex-direction: column;
+    }
+
+    .bottom-bar {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+
+    }
+}
